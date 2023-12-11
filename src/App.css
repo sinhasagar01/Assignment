@@ -1,0 +1,445 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  /* max-width: 1442px; */
+}
+
+.home-page {
+  display: flex;
+}
+
+/* Home Page CSS */
+.content-section {
+  width: 55.6%;
+}
+
+.testimonial {
+  position: relative;
+}
+
+.testimonial__title {
+  padding: 0 62px;
+}
+
+.testimonial__title .testimonial__heading {
+  color: #F2F2F2;
+  text-align: right;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 30px;
+  padding-bottom: 20px;
+}
+
+.logo {
+  position: absolute;
+  bottom: 10px;
+  padding-left: 62px;
+
+}
+
+.carousel__container {
+  cursor: grab;
+  overflow: hidden;
+}
+
+.carousel__track {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 90px;
+  padding-left: 62px;
+}
+
+.testimonial h2 {
+  color: #F2F2F2;
+  text-align: right;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.testimonial hr {
+  background-color: #E5E5E6;
+  text-align: right;
+  height: 0.5px;
+  margin-bottom: 30px;
+  opacity: 0.5;
+}
+
+
+/* Hero Section CSS */
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 0 3rem 0;
+}
+
+.hero-section .hero-text {
+  padding-left: 62px;
+  width: 50%;
+}
+
+.hero-section .scroller {
+  width: 50%;
+}
+
+.hero-section .hero-text .text-block__title {
+  padding: 16px 0;
+  color: #F2F2F2;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 31px;
+  font-weight: 500;
+  line-height: 37.2px;
+}
+
+.hero-section .hero-text .text-block__text {
+  color: #F2F2F2;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.2px;
+  opacity: 0.7;
+}
+
+/* Section 02 CSS */
+.image-text-section {
+  padding: 1rem 62px;
+  display: flex;
+  align-items: top;
+}
+
+.image-text-section .img-block {
+  width: 56%;
+}
+
+.image-text-section .img-block img {
+  max-width: 100%;
+  width: 335px;
+  box-shadow: 0px 14px 64px -4px rgba(24, 39, 75, 0.12), 0px 8px 22px -6px rgba(24, 39, 75, 0.12);
+}
+
+.image-text-section .text-block {
+  text-align: right;
+  width: 44%;
+}
+
+.image-text-section .text-block .text-block__title {
+  padding: 16px 0;
+  font-size: 31px;
+  color: #F2F2F2;
+  font-weight: 500;
+  line-height: 37.2px;
+}
+
+.image-text-section .text-block .text-block__text {
+  color: #F2F2F2;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.2px;
+  opacity: 0.7;
+}
+
+/* Infinit Carousel CSS */
+
+.scroller {
+  max-width: 360px;
+}
+
+.scroller__inner {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.scroller[data-animated='true'] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated='true'] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction='right'] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction='left'] {
+  --_animation-direction: forwards;
+}
+
+.scroller[data-speed='fast'] {
+  --_animation-duration: 20s;
+}
+
+.scroller[data-speed='slow'] {
+  --_animation-duration: 60s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+.scroller img {
+  width: 189.7px;
+  box-shadow: 0px 0.7px 0.7px 0px rgba(0, 0, 0, 0.04), 0px 2.8px 7px 0px rgba(0, 0, 0, 0.04);
+}
+
+.scroller li {
+  list-style: none;
+}
+
+
+/* Signup Section CSS */
+
+.signup-section {
+  width: 44.4%;
+  background-color: #fff;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 14px 64px -4px rgba(24, 39, 75, 0.12), 0px 8px 22px -6px rgba(24, 39, 75, 0.12);
+}
+
+.signUp {
+  width: 340px;
+}
+
+.signUp__title {
+  color: #B0B1B3;
+  font-size: 39px;
+  font-weight: 500;
+  line-height: 46.8px;
+}
+
+.signUp__subtitle {
+  color: #19191A;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19.2px;
+}
+
+
+@media screen and (max-width: 1262px) {
+  .content-section {
+    width: 65%;
+  }
+
+  .signup-section {
+    width: 35%;
+  }
+
+  .hero-section .hero-text .text-block__title,
+  .image-text-section .text-block .text-block__title {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .image-text-section .img-block img {
+    width: 300px;
+  }
+
+  .signUp {
+    width: 300px;
+  }
+
+  .signUp__title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .testimonial__title {
+    padding: 0 32px;
+  }
+
+  .logo {
+    padding-left: 32px;
+  }
+
+  .carousel__track {
+    padding-left: 32px;
+  }
+
+  .hero-section .hero-text {
+    padding-left: 32px;
+  }
+
+  .image-text-section {
+    padding: 1rem 32px;
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  .hero-section {
+    padding: 4rem 0 1rem 0;
+  }
+
+  .image-text-section .img-block {
+    width: 45%;
+  }
+
+  .image-text-section .text-block {
+    width: 55%;
+    padding-left: 20px;
+  }
+
+  .content-section {
+    width: 100%;
+  }
+
+  .testimonial {
+    margin-bottom: 210px;
+  }
+
+  .signUp__title br {
+    display: none;
+  }
+
+  .signup-section {
+    width: 100%;
+    flex-direction: row;
+    padding: 0.5rem 0;
+    position: fixed;
+    bottom: 0;
+  }
+
+  .signUp {
+    width: 600px;
+    padding: 1rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .signUp__subtitle {
+    text-align: left;
+  }
+
+  .testimonial__title {
+    padding: 0 62px;
+  }
+
+  .logo {
+    padding-left: 62px;
+  }
+
+  .carousel__track {
+    padding-left: 62px;
+  }
+
+  .hero-section .hero-text {
+    padding-left: 62px;
+  }
+
+  .image-text-section {
+    padding: 1rem 62px;
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+  .hero-section {
+    flex-direction: column;
+  }
+
+  .hero-section .hero-text {
+    width: 100%;
+    padding: 0 30px 25px;
+  }
+
+  .scroller {
+    max-width: 100%;
+  }
+
+  .hero-section .scroller {
+    width: 100%;
+    padding: 0 30px 0 0;
+  }
+
+  .image-text-section {
+    flex-direction: column;
+    padding: 1rem 30px;
+  }
+
+  .image-text-section .img-block,
+  .image-text-section .text-block {
+    width: 100%;
+  }
+
+  .image-text-section .img-block {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .image-text-section .img-block img {
+    width: 100%;
+  }
+
+  .image-text-section .text-block {
+    text-align: left;
+    padding-left: 0;
+    padding-block: 1rem;
+  }
+
+
+
+  form {
+    flex-direction: column;
+  }
+
+  .signUp__title {
+    text-align: left;
+  }
+
+  .signUp {
+    width: 300px;
+    padding: 1rem 0;
+  }
+
+  .signUp__title br {
+    display: block;
+  }
+
+  .testimonial {
+    margin-bottom: 330px;
+  }
+
+  .testimonial__title {
+    padding: 0 30px;
+  }
+
+  .carousel__track {
+    padding-left: 20px;
+    margin-left: 0px;
+  }
+
+  .logo {
+    padding-left: 30px;
+    top: -10px;
+    left: -2px;
+    width: 80px;
+  }
+}

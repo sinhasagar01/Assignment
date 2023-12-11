@@ -1,0 +1,11 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(94.19% 103.74% at 19.27% 95.27%, rgba(31, 169, 17, 1) 27.21%, #2F15D0 65.58%, rgba(0, 0, 0, 1.00) 95%);
+}
