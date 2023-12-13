@@ -17,6 +17,7 @@
   color: #CACBCC;
 }
 
+.signUp__input--field:hover,
 .signUp__input--field:focus {
   border-color: #19191A;
 }
@@ -39,6 +40,10 @@
   background-color: #19191A;
   margin-bottom: 24px;
   cursor: pointer;
+}
+
+.signUp__input--submit:hover {
+  opacity: 0.9;
 }
 
 

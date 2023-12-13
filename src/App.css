@@ -23,6 +23,7 @@ body {
 
 .testimonial {
   position: relative;
+  height: 320px;
 }
 
 .testimonial__title {
@@ -42,7 +43,8 @@ body {
   position: absolute;
   bottom: 10px;
   padding-left: 62px;
-
+  top: 168px;
+  z-index: 99;
 }
 
 .carousel__container {
@@ -87,7 +89,7 @@ body {
 
 .hero-section .hero-text {
   padding-left: 62px;
-  width: 50%;
+  /* width: 50%; */
 }
 
 .hero-section .scroller {
@@ -95,6 +97,7 @@ body {
 }
 
 .hero-section .hero-text .text-block__title {
+  width: 335.812px;
   padding: 16px 0;
   color: #F2F2F2;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -109,13 +112,14 @@ body {
   font-weight: 500;
   line-height: 19.2px;
   opacity: 0.7;
+  width: 325px;
 }
 
 /* Section 02 CSS */
 .image-text-section {
   padding: 1rem 62px;
   display: flex;
-  align-items: top;
+  justify-content: space-between;
 }
 
 .image-text-section .img-block {
@@ -130,10 +134,16 @@ body {
 
 .image-text-section .text-block {
   text-align: right;
-  width: 44%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+
 }
 
 .image-text-section .text-block .text-block__title {
+  max-width: 270px;
+  width: 100%;
   padding: 16px 0;
   font-size: 31px;
   color: #F2F2F2;
@@ -142,6 +152,7 @@ body {
 }
 
 .image-text-section .text-block .text-block__text {
+  width: 295px;
   color: #F2F2F2;
   font-size: 16px;
   font-weight: 500;
@@ -236,6 +247,11 @@ body {
   line-height: 19.2px;
 }
 
+@media screen and (max-width: 1343px) {
+  .testimonial {
+    height: 372px;
+  }
+}
 
 @media screen and (max-width: 1262px) {
   .content-section {
@@ -250,6 +266,12 @@ body {
   .image-text-section .text-block .text-block__title {
     font-size: 25px;
     line-height: 30px;
+    width: 270px;
+  }
+
+
+  .image-text-section .text-block .text-block__text {
+    width: 315.750px;
   }
 
   .image-text-section .img-block img {
@@ -284,6 +306,10 @@ body {
   .image-text-section {
     padding: 1rem 32px;
   }
+
+  .testimonial {
+    height: 370px;
+  }
 }
 
 
@@ -297,7 +323,7 @@ body {
   }
 
   .image-text-section .text-block {
-    width: 55%;
+    /* width: 55%; */
     padding-left: 20px;
   }
 
@@ -306,7 +332,7 @@ body {
   }
 
   .testimonial {
-    margin-bottom: 210px;
+    margin-bottom: 140px;
   }
 
   .signUp__title br {
@@ -390,18 +416,18 @@ body {
 
   .image-text-section .img-block {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     margin-bottom: 20px;
   }
 
   .image-text-section .img-block img {
-    width: 100%;
+    width: 300px;
   }
 
   .image-text-section .text-block {
     text-align: left;
     padding-left: 0;
-    padding-block: 1rem;
+    padding-block: 1rem 2.5rem;
   }
 
 
@@ -424,7 +450,7 @@ body {
   }
 
   .testimonial {
-    margin-bottom: 330px;
+    margin-bottom: 260px;
   }
 
   .testimonial__title {
@@ -441,5 +467,26 @@ body {
     top: -10px;
     left: -2px;
     width: 80px;
+  }
+
+  .image-text-section .text-block {
+    align-items: flex-start;
+  }
+
+  /* .hero-section .hero-text .text-block__title,
+  .image-text-section .text-block .text-block__title,
+  .hero-section .hero-text .text-block__text,
+  .image-text-section .text-block .text-block__text {
+    width: 300px;
+  } */
+}
+
+@media screen and (max-width: 360px) {
+
+  .hero-section .hero-text .text-block__title,
+  .image-text-section .text-block .text-block__title,
+  .hero-section .hero-text .text-block__text,
+  .image-text-section .text-block .text-block__text {
+    width: 100%;
   }
 }
